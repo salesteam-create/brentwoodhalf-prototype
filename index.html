@@ -43,10 +43,8 @@
            Drop assets/photos/brentwood-hero.jpg in; falls back to the branded placeholder. -->
       <img class="hero__photo" src="assets/photos/brentwood-hero.jpg" alt=""
            onerror="this.onerror=null;this.src='assets/photos/placeholder-brentwood-hero.svg'" />
-      <!-- Optional hero video loop (race footage). Drop assets/video/hero.mp4 / .webm in to
-           activate; it reveals over the landmark still only once a real file loads. -->
+      <!-- Hero video loop. Reveals over the landmark still only once it loads. -->
       <video class="hero__video" id="heroVideo" muted loop playsinline preload="auto" aria-hidden="true">
-        <source src="assets/video/hero.webm" type="video/webm" />
         <source src="assets/video/hero.mp4" type="video/mp4" />
       </video>
       <div class="hero__scrim"></div>
