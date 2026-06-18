@@ -61,13 +61,15 @@ The layout is photography-first. The **hero and the five Brentwood landmark
 slots are now real, self-hosted photos of the actual places** — pulled from
 Wikimedia Commons under Creative Commons licences and bundled into
 `assets/photos/` (see [`assets/photos/CREDITS.md`](assets/photos/CREDITS.md) for
-attribution). The six race-day gallery tiles still pull **marathon photos from
-Pexels** (free licence) via their image CDN. Each slot falls back to a branded
-SVG placeholder if the image can't load (e.g. offline).
+attribution). The six race-day gallery tiles are **also self-hosted** now —
+real marathon / half-marathon photos from Wikimedia Commons (they used to
+hotlink Pexels, but `images.pexels.com` now blocks hotlinks with HTTP 403, so
+nothing rendered). Every slot still falls back to a branded SVG placeholder if
+the file can't load (e.g. offline).
 
-> **Attribution:** the bundled Brentwood photos are CC BY / CC BY-SA; credit the
+> **Attribution:** all bundled photos are CC BY / CC BY-SA; credit the
 > photographers per `assets/photos/CREDITS.md`, and note CC BY-SA's share-alike
-> requirement. The Pexels gallery images are free under the Pexels licence.
+> requirement.
 
 To swap in your own / the official race photography, replace the `src` URLs in
 `index.html` (or drop files into `assets/photos/` and point the `src` at them).
