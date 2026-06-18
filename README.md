@@ -57,17 +57,17 @@ suggested free Pexels clips. Autoplay is suppressed under
 
 ## Photography
 
-The layout is photography-first. The story panel and the six gallery tiles
-currently pull **real marathon photos from Pexels** (free licence) via their
-image CDN, so they render in any normal browser. Each slot falls back to a
-branded SVG placeholder if the image can't load (e.g. offline).
+The layout is photography-first. The **hero and the five Brentwood landmark
+slots are now real, self-hosted photos of the actual places** — pulled from
+Wikimedia Commons under Creative Commons licences and bundled into
+`assets/photos/` (see [`assets/photos/CREDITS.md`](assets/photos/CREDITS.md) for
+attribution). The six race-day gallery tiles still pull **marathon photos from
+Pexels** (free licence) via their image CDN. Each slot falls back to a branded
+SVG placeholder if the image can't load (e.g. offline).
 
-> **Note on this environment:** the sandbox blocks outbound downloads (network
-> egress allowlist), so the Pexels images are *hotlinked* rather than
-> downloaded here, and the hero video file couldn't be fetched. For production
-> you'd self-host the assets. To have me fetch + self-host them automatically,
-> add `images.pexels.com` and `videos.pexels.com` to the environment's network
-> egress settings — then I can pull a real hero clip and bundle the images.
+> **Attribution:** the bundled Brentwood photos are CC BY / CC BY-SA; credit the
+> photographers per `assets/photos/CREDITS.md`, and note CC BY-SA's share-alike
+> requirement. The Pexels gallery images are free under the Pexels licence.
 
 To swap in your own / the official race photography, replace the `src` URLs in
 `index.html` (or drop files into `assets/photos/` and point the `src` at them).
@@ -96,11 +96,11 @@ attribution-friendly sources for the *actual* places:
 - The town's own visitor sites / the official race archive for race-day shots
   (clear rights first).
 
-> This sandbox can't download images (egress allowlist), so the Brentwood slots
-> currently show branded placeholders that name each landmark. To have me fetch
-> and self-host real ones automatically, add `upload.wikimedia.org` (and/or the
-> source host) to the environment's network egress settings — or drop the files
-> into `assets/photos/` using the names above.
+> **Now bundled:** the hero and the five Brentwood landmark slots have been
+> fetched from Wikimedia Commons (`upload.wikimedia.org`) and self-hosted in
+> `assets/photos/` under the filenames above — see
+> [`CREDITS.md`](assets/photos/CREDITS.md). Only `archive.jpg` (race heritage)
+> remains a placeholder, as no freely-licensed historic race photo was found.
 
 > **Licensing:** the live site's race photos appear to be by a commissioned
 > photographer (Sussex Sport Photography) — clear rights before using those.
