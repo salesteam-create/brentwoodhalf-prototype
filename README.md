@@ -98,11 +98,12 @@ attribution-friendly sources for the *actual* places:
 - The town's own visitor sites / the official race archive for race-day shots
   (clear rights first).
 
-> **Now bundled:** the hero and the five Brentwood landmark slots have been
-> fetched from Wikimedia Commons (`upload.wikimedia.org`) and self-hosted in
-> `assets/photos/` under the filenames above — see
-> [`CREDITS.md`](assets/photos/CREDITS.md). Only `archive.jpg` (race heritage)
-> remains a placeholder, as no freely-licensed historic race photo was found.
+> **Now bundled:** the hero, the five Brentwood landmark slots, the heritage
+> `archive.jpg` and the six gallery tiles have all been fetched from Wikimedia
+> Commons (`upload.wikimedia.org`) and self-hosted in `assets/photos/` under the
+> filenames above — see [`CREDITS.md`](assets/photos/CREDITS.md). The archive
+> shot is a road-race photo shown with a CSS grayscale/sepia "archive" tone (no
+> freely-licensed *historic Brentwood Half* photo exists).
 
 > **Licensing:** the live site's race photos appear to be by a commissioned
 > photographer (Sussex Sport Photography) — clear rights before using those.

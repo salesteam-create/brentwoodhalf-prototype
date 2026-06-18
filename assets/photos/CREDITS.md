@@ -33,9 +33,13 @@ They are now self-hosted race photos from Wikimedia Commons:
 | `g5.jpg` | Omagh Half Marathon runners | Kenneth Allen | CC BY-SA 2.0 | https://commons.wikimedia.org/w/index.php?curid=128595111 |
 | `g6.jpg` | Marathon runners near the finish | Stephen Craven | CC BY-SA 2.0 | https://commons.wikimedia.org/w/index.php?curid=144105310 |
 
-## Still a placeholder
+## Heritage "The Story" panel
 
-- `archive.jpg` (heritage "The Story" panel) — no freely-licensed historic
-  Brentwood Half race photo was found; the live site's race photography is by a
-  commissioned photographer (Sussex Sport Photography), so clear rights before
-  using. Shows the branded placeholder for now.
+| File | Subject | Author | Licence | Source |
+| ---- | ------- | ------ | ------- | ------ |
+| `archive.jpg` | Road-race runner cheered by spectators (Berlin Marathon 2015) | Denis Barthel | CC BY-SA 4.0 | https://commons.wikimedia.org/w/index.php?curid=43719352 |
+
+Displayed with a CSS grayscale/sepia "archive" tone behind the 1982 → 2026
+heritage overlay. (No freely-licensed *historic Brentwood Half* race photo
+exists — the event's own archive shots are by a commissioned photographer,
+Sussex Sport Photography, so clear rights before using those in production.)
