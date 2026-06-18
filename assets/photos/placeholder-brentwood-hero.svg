@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0c1411"/><stop offset="1" stop-color="#05070a"/>
+    </linearGradient>
+    <radialGradient id="dawn" cx="60%" cy="80%" r="70%">
+      <stop offset="0" stop-color="#c6ff3a" stop-opacity="0.16"/><stop offset="1" stop-color="#c6ff3a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#sky)"/>
+  <rect width="1600" height="1000" fill="url(#dawn)"/>
+  <!-- skyline silhouette -->
+  <g fill="#000" fill-opacity="0.55">
+    <rect x="120" y="720" width="180" height="200"/>
+    <rect x="320" y="680" width="120" height="240"/>
+    <!-- cathedral lantern + dome -->
+    <rect x="700" y="640" width="200" height="280"/>
+    <rect x="760" y="560" width="80" height="90"/>
+    <circle cx="800" cy="560" r="46"/>
+    <rect x="792" y="500" width="16" height="40"/>
+    <!-- high street clock tower -->
+    <rect x="1040" y="700" width="90" height="220"/>
+    <rect x="1060" y="660" width="50" height="50"/>
+    <circle cx="1085" cy="640" r="10"/>
+    <rect x="1180" y="740" width="220" height="180"/>
+  </g>
+  <text x="50%" y="44%" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="58" fill="#ffffff" fill-opacity="0.12" letter-spacing="10">BRENTWOOD · ESSEX</text>
+  <text x="50%" y="49%" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#c6ff3a" fill-opacity="0.55" letter-spacing="3">drop a Brentwood landmark photo here → brentwood-hero.jpg</text>
+</svg>

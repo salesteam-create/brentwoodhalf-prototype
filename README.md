@@ -72,11 +72,35 @@ branded SVG placeholder if the image can't load (e.g. offline).
 To swap in your own / the official race photography, replace the `src` URLs in
 `index.html` (or drop files into `assets/photos/` and point the `src` at them).
 
-| Slot                | Where it appears            | Suggested size        |
-| ------------------- | --------------------------- | --------------------- |
-| hero video / still  | Full-screen hero background | 1920×1080 / 1600×1000 |
-| story image         | "The Story" portrait panel  | ~1000×1250, portrait  |
-| gallery `g1`–`g6`   | Race-day gallery tiles      | ~900×700, landscape   |
+| Slot                       | File (`assets/photos/`)   | Where it appears            | Suggested size        |
+| -------------------------- | ------------------------- | --------------------------- | --------------------- |
+| hero still (place-led)     | `brentwood-hero.jpg`      | Full-screen hero backdrop   | ~1600×1000, landscape |
+| hero video (optional)      | `../video/hero.mp4`       | Hero motion layer           | 1920×1080             |
+| Brentwood Cathedral        | `lm-cathedral.jpg`        | "Run through Brentwood"     | ~900×1200, portrait   |
+| The High Street            | `lm-highstreet.jpg`       | "Run through Brentwood"     | ~900×700              |
+| The Chapel Ruins           | `lm-chapel.jpg`           | "Run through Brentwood"     | ~900×700              |
+| Essex Countryside          | `lm-countryside.jpg`      | "Run through Brentwood"     | ~900×700              |
+| Town-centre finish         | `lm-finish.jpg`           | "Run through Brentwood"     | ~1400×700, landscape  |
+| Heritage / archive race    | `archive.jpg`             | "The Story" panel           | ~1000×1250, portrait  |
+| gallery `g1`–`g6`          | hotlinked Pexels (swap)   | Race-day gallery tiles      | ~900×700              |
+
+### Sourcing Brentwood landmark photos (free / properly-licensed)
+
+Generic stock won't have Brentwood Cathedral or the High Street. Best free,
+attribution-friendly sources for the *actual* places:
+
+- **Wikimedia Commons** — search "Brentwood, Essex", "Brentwood Cathedral",
+  "Brentwood High Street" (mostly CC BY-SA; credit the photographer).
+- **Geograph Britain & Ireland** (geograph.org.uk) — excellent coverage of
+  Brentwood streets, parks and the route's countryside (CC BY-SA 2.0).
+- The town's own visitor sites / the official race archive for race-day shots
+  (clear rights first).
+
+> This sandbox can't download images (egress allowlist), so the Brentwood slots
+> currently show branded placeholders that name each landmark. To have me fetch
+> and self-host real ones automatically, add `upload.wikimedia.org` (and/or the
+> source host) to the environment's network egress settings — or drop the files
+> into `assets/photos/` using the names above.
 
 > **Licensing:** the live site's race photos appear to be by a commissioned
 > photographer (Sussex Sport Photography) — clear rights before using those.

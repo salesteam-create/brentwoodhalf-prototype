@@ -128,7 +128,7 @@
 
   // Tag sections/cards for reveal
   const revealEls = document.querySelectorAll(
-    ".section__head, .course__panel, .course__route li, .story__media, .story__copy, .gtile, .ccard, .tier, .ac, .finalcta .container"
+    ".section__head, .course__panel, .course__route li, .place, .story__media, .story__copy, .gtile, .ccard, .tier, .ac, .finalcta .container"
   );
   revealEls.forEach((el, i) => {
     el.classList.add("reveal");
@@ -170,7 +170,7 @@
   }
 
   /* ---------- Scrollspy: highlight active nav link ---------- */
-  const sections = ["course", "story", "gallery", "charities", "faq"]
+  const sections = ["course", "places", "story", "gallery", "charities", "faq"]
     .map((id) => document.getElementById(id))
     .filter(Boolean);
   const linkFor = {};

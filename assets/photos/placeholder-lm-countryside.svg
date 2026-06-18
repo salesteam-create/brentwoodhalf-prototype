@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="700" viewBox="0 0 900 700">
+  <defs><radialGradient id="r" cx="50%" cy="35%" r="80%">
+    <stop offset="0" stop-color="#c6ff3a" stop-opacity="0.14"/><stop offset="1" stop-color="#0e1310" stop-opacity="0"/>
+  </radialGradient></defs>
+  <rect width="900" height="700" fill="#141a16"/>
+  <rect width="900" height="700" fill="url(#r)"/>
+  <g fill="none" stroke="#c6ff3a" stroke-opacity="0.30" stroke-width="4"><path d="M300 360 q90 -70 180 0 t180 0"/><circle cx="600" cy="250" r="26"/></g>
+  <text x="50%" y="86%" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="30" fill="#ffffff" fill-opacity="0.85" letter-spacing="2">ESSEX COUNTRYSIDE</text>
+  <text x="50%" y="92%" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#c6ff3a" fill-opacity="0.6" letter-spacing="1">drop lm-countryside.jpg</text>
+</svg>

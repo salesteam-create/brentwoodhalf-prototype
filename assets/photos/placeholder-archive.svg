@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1250" viewBox="0 0 1000 1250">
+  <rect width="1000" height="1250" fill="#0e1310"/>
+  <rect x="40" y="40" width="920" height="1170" fill="#1a201c" stroke="#ffffff" stroke-opacity="0.08"/>
+  <text x="50%" y="48%" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="46" fill="#ffffff" fill-opacity="0.14" letter-spacing="4">EST. 1982</text>
+  <text x="50%" y="53%" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#c6ff3a" fill-opacity="0.5" letter-spacing="2">drop an archive race photo here</text>
+</svg>

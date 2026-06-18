@@ -23,6 +23,7 @@
       </a>
       <nav class="nav__links" id="navLinks" aria-label="Primary">
         <a href="#course">The Course</a>
+        <a href="#places">Brentwood</a>
         <a href="#story">The Story</a>
         <a href="#gallery">Gallery</a>
         <a href="#charities">Charities</a>
@@ -38,11 +39,12 @@
   <!-- ===== Hero ===== -->
   <section class="hero" id="top">
     <div class="hero__bg" aria-hidden="true">
-      <!-- Fallback still sits behind the video: real photo (Pexels) → SVG placeholder if offline -->
-      <img class="hero__photo" src="https://images.pexels.com/photos/2461982/pexels-photo-2461982.jpeg?auto=compress&cs=tinysrgb&w=1600" alt=""
-           onerror="this.onerror=null;this.src='assets/photos/placeholder-hero.svg'" />
-      <!-- Hero video loop: drop assets/video/hero.mp4 (and optional hero.webm) in to activate.
-           Until a real file exists, the element stays hidden and the photo above shows through. -->
+      <!-- Place-led backdrop: a Brentwood landmark (town centre / cathedral / high street).
+           Drop assets/photos/brentwood-hero.jpg in; falls back to the branded placeholder. -->
+      <img class="hero__photo" src="assets/photos/brentwood-hero.jpg" alt=""
+           onerror="this.onerror=null;this.src='assets/photos/placeholder-brentwood-hero.svg'" />
+      <!-- Optional hero video loop (race footage). Drop assets/video/hero.mp4 / .webm in to
+           activate; it reveals over the landmark still only once a real file loads. -->
       <video class="hero__video" id="heroVideo" muted loop playsinline preload="auto" aria-hidden="true">
         <source src="assets/video/hero.webm" type="video/webm" />
         <source src="assets/video/hero.mp4" type="video/mp4" />
@@ -178,14 +180,80 @@
     </div>
   </section>
 
+  <!-- ===== Run through Brentwood (place / landmarks) ===== -->
+  <section class="places section" id="places">
+    <div class="container">
+      <div class="section__head">
+        <p class="kicker">/ A Run Through Brentwood</p>
+        <h2 class="section__title">This is <em>our</em> town</h2>
+        <p class="section__lead">13.1 miles past the places Brentwood knows by heart — from the cathedral and the old High Street, out through the Essex lanes, and home to a town-centre finish lined with neighbours.</p>
+      </div>
+
+      <div class="places__grid">
+        <article class="place place--lead">
+          <img src="assets/photos/lm-cathedral.jpg" alt="Brentwood Cathedral" loading="lazy"
+               onerror="this.onerror=null;this.src='assets/photos/placeholder-lm-cathedral.svg'">
+          <div class="place__cap">
+            <span class="place__tag">Mile 0 · The landmark</span>
+            <h3>Brentwood Cathedral</h3>
+            <p>The town's signature silhouette — Quinlan Terry's Italian-Renaissance landmark watches the runners set off.</p>
+          </div>
+        </article>
+
+        <article class="place">
+          <img src="assets/photos/lm-highstreet.jpg" alt="Brentwood High Street" loading="lazy"
+               onerror="this.onerror=null;this.src='assets/photos/placeholder-lm-highstreet.svg'">
+          <div class="place__cap">
+            <span class="place__tag">The old road</span>
+            <h3>The High Street</h3>
+            <p>A Roman road and pilgrim route, past the old White Hart inn.</p>
+          </div>
+        </article>
+
+        <article class="place">
+          <img src="assets/photos/lm-chapel.jpg" alt="The medieval chapel ruins" loading="lazy"
+               onerror="this.onerror=null;this.src='assets/photos/placeholder-lm-chapel.svg'">
+          <div class="place__cap">
+            <span class="place__tag">12th century</span>
+            <h3>The Chapel Ruins</h3>
+            <p>Brentwood's pilgrim origins, right in the town centre.</p>
+          </div>
+        </article>
+
+        <article class="place">
+          <img src="assets/photos/lm-countryside.jpg" alt="The Essex countryside" loading="lazy"
+               onerror="this.onerror=null;this.src='assets/photos/placeholder-lm-countryside.svg'">
+          <div class="place__cap">
+            <span class="place__tag">Miles 4–10</span>
+            <h3>Essex Countryside</h3>
+            <p>Rolling, leafy lanes past Weald and Thorndon parkland.</p>
+          </div>
+        </article>
+
+        <article class="place place--wide">
+          <img src="assets/photos/lm-finish.jpg" alt="The town-centre finish" loading="lazy"
+               onerror="this.onerror=null;this.src='assets/photos/placeholder-lm-finish.svg'">
+          <div class="place__cap">
+            <span class="place__tag">Mile 13.1 · Home</span>
+            <h3>The Town-Centre Finish</h3>
+            <p>The roar of the High Street as the whole town turns out to cheer you home.</p>
+          </div>
+        </article>
+      </div>
+
+      <p class="places__note">Recognise a spot? Tag <strong>#BrentwoodHalf</strong> and show the town off.</p>
+    </div>
+  </section>
+
   <!-- ===== Story / Matchroom ===== -->
   <section class="story section" id="story">
     <div class="container story__grid">
       <div class="story__media">
         <div class="story__photo">
-          <!-- Pexels photo → SVG placeholder fallback -->
-          <img src="https://images.pexels.com/photos/9947999/pexels-photo-9947999.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=1000&h=1250" alt="Marathon runner"
-               onerror="this.onerror=null;this.src='assets/photos/placeholder-story.svg'" />
+          <!-- Heritage / archive race photo. Drop assets/photos/archive.jpg in
+               (ideally an older Brentwood race shot); falls back to the placeholder. -->
+          <img src="assets/photos/archive.jpg" alt="A Brentwood Half Marathon from years past"
+               onerror="this.onerror=null;this.src='assets/photos/placeholder-archive.svg'" />
           <div class="story__photo-overlay" aria-hidden="true">
             <span class="story__year">1982</span>
             <span class="story__arrow">→</span>
@@ -200,12 +268,12 @@
       </div>
       <div class="story__copy">
         <p class="kicker">/ The Story</p>
-        <h2 class="section__title">Four decades. One <em>iconic</em> Essex morning.</h2>
-        <p>Since 1982, the Brentwood Half has grown from a local club run into the largest race of its kind in Essex — a fixture in the spring running calendar that thousands chase a PB at every year.</p>
-        <p>For 2026 the race steps up again: <strong>Barry Hearn OBE and Matchroom</strong> have committed a landmark five-year, £100,000+ title sponsorship — bringing fight-night production values to one of the friendliest start lines in the country.</p>
+        <h2 class="section__title">Brentwood's own, since <em>1982</em>.</h2>
+        <p>It began as a Rotary Club of Brentwood à Becket fundraiser — a 9-mile run that grew, by 1984, into the half marathon the town now plans its spring around. Four decades on, it's the largest race of its kind in Essex, raising an estimated <strong>£3.8&nbsp;million</strong> for good causes along the way.</p>
+        <p>For 2026 it steps up again: <strong>Barry Hearn OBE and Matchroom</strong> have committed a landmark five-year, £100,000+ title sponsorship — bringing fight-night production to one of the friendliest start lines in the country, on the streets where it all started.</p>
         <div class="timeline">
-          <div class="tl"><span class="tl__y">1982</span><span class="tl__t">First running</span></div>
-          <div class="tl"><span class="tl__y">2010s</span><span class="tl__t">2,500-strong field</span></div>
+          <div class="tl"><span class="tl__y">1982</span><span class="tl__t">Rotary's first run</span></div>
+          <div class="tl"><span class="tl__y">1984</span><span class="tl__t">The Half is born</span></div>
           <div class="tl"><span class="tl__y">2026</span><span class="tl__t">Matchroom era begins</span></div>
         </div>
       </div>
