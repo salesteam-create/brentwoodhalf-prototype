@@ -35,6 +35,35 @@
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 
+  /* ---------- Hero video ---------- */
+  // The <video> only reveals itself once a real, playable file is present
+  // (assets/video/hero.mp4 / .webm). Until then the photo fallback shows.
+  // Autoplay is suppressed when the user prefers reduced motion.
+  const heroVideo = document.getElementById("heroVideo");
+  const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (heroVideo) {
+    if (prefersReduced) {
+      heroVideo.removeAttribute("autoplay");
+    } else {
+      // 'canplay' fires only when a source actually loads — guards against
+      // showing an empty/black box when no video file has been added yet.
+      heroVideo.addEventListener("canplay", () => {
+        heroVideo.classList.add("is-playing");
+        const p = heroVideo.play();
+        if (p && typeof p.catch === "function") p.catch(() => {});
+      }, { once: true });
+      // Pause when off-screen to save resources
+      if ("IntersectionObserver" in window) {
+        new IntersectionObserver((ents) => {
+          ents.forEach((e) => {
+            if (!heroVideo.classList.contains("is-playing")) return;
+            e.isIntersecting ? heroVideo.play().catch(() => {}) : heroVideo.pause();
+          });
+        }, { threshold: 0.1 }).observe(heroVideo);
+      }
+    }
+  }
+
   /* ---------- Countdown ---------- */
   // Race day: 22 March 2026, 10:00. If that's already passed (e.g. viewing
   // later in the year), roll the countdown forward to the next edition so the

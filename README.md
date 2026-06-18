@@ -47,24 +47,40 @@ js/main.js        # countdown, animated counters, scroll reveal, nav, FAQ
 - Fully **responsive** with a mobile slide-in menu.
 - Respects **`prefers-reduced-motion`** (animations disabled, content shown).
 
+## Hero video
+
+The hero is a muted, looping background **video** with the still photo as a
+fallback. It activates automatically the moment a file exists — see
+[`assets/video/README.md`](assets/video/README.md) for specs and a couple of
+suggested free Pexels clips. Autoplay is suppressed under
+`prefers-reduced-motion`; off-screen it pauses to save resources.
+
 ## Photography
 
-The layout is photography-first. Each photo slot loads a real image and falls
-back to a branded SVG placeholder if the file is missing — so dropping in the
-official shots is just a filename swap (no code changes). Add these files to
-`assets/photos/`:
+The layout is photography-first. The story panel and the six gallery tiles
+currently pull **real marathon photos from Pexels** (free licence) via their
+image CDN, so they render in any normal browser. Each slot falls back to a
+branded SVG placeholder if the image can't load (e.g. offline).
 
-| File                    | Where it appears              | Suggested size      |
-| ----------------------- | ----------------------------- | ------------------- |
-| `hero.jpg`              | Full-screen hero background   | ~1600×1000, landscape |
-| `story.jpg`             | "The Story" portrait panel    | ~1000×1250, portrait  |
-| `g1.jpg` … `g6.jpg`     | Race-day gallery tiles        | ~900×700, landscape   |
+> **Note on this environment:** the sandbox blocks outbound downloads (network
+> egress allowlist), so the Pexels images are *hotlinked* rather than
+> downloaded here, and the hero video file couldn't be fetched. For production
+> you'd self-host the assets. To have me fetch + self-host them automatically,
+> add `images.pexels.com` and `videos.pexels.com` to the environment's network
+> egress settings — then I can pull a real hero clip and bundle the images.
 
-> **Licensing note:** the live site's race photos appear to be by a commissioned
-> photographer (Sussex Sport Photography). Use images you have the rights to —
-> either the official race photography (with the photographer's clearance) or
-> properly-licensed stock. This environment can't fetch external images, so the
-> placeholders ship in their place for now.
+To swap in your own / the official race photography, replace the `src` URLs in
+`index.html` (or drop files into `assets/photos/` and point the `src` at them).
+
+| Slot                | Where it appears            | Suggested size        |
+| ------------------- | --------------------------- | --------------------- |
+| hero video / still  | Full-screen hero background | 1920×1080 / 1600×1000 |
+| story image         | "The Story" portrait panel  | ~1000×1250, portrait  |
+| gallery `g1`–`g6`   | Race-day gallery tiles      | ~900×700, landscape   |
+
+> **Licensing:** the live site's race photos appear to be by a commissioned
+> photographer (Sussex Sport Photography) — clear rights before using those.
+> The Pexels images shipped here are free to use under the Pexels licence.
 
 ## Notes
 
