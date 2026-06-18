@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="700" viewBox="0 0 900 700">
+  <defs><radialGradient id="r" cx="30%" cy="25%" r="80%">
+    <stop offset="0" stop-color="#c6ff3a" stop-opacity="0.14"/><stop offset="1" stop-color="#0e1310" stop-opacity="0"/>
+  </radialGradient></defs>
+  <rect width="900" height="700" fill="#12181400"/>
+  <rect width="900" height="700" fill="#141a16"/>
+  <rect width="900" height="700" fill="url(#r)"/>
+  <text x="50%" y="50%" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="34" fill="#ffffff" fill-opacity="0.12" letter-spacing="3">PHOTO 1</text>
+</svg>

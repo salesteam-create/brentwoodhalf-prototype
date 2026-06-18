@@ -24,6 +24,7 @@
       <nav class="nav__links" id="navLinks" aria-label="Primary">
         <a href="#course">The Course</a>
         <a href="#story">The Story</a>
+        <a href="#gallery">Gallery</a>
         <a href="#charities">Charities</a>
         <a href="#faq">FAQ</a>
         <a href="#enter" class="btn btn--sm btn--accent">Enter Now</a>
@@ -37,6 +38,10 @@
   <!-- ===== Hero ===== -->
   <section class="hero" id="top">
     <div class="hero__bg" aria-hidden="true">
+      <!-- Photo layer: drop assets/photos/hero.jpg in to replace the placeholder -->
+      <img class="hero__photo" src="assets/photos/hero.jpg" alt=""
+           onerror="this.onerror=null;this.src='assets/photos/placeholder-hero.svg'" />
+      <div class="hero__scrim"></div>
       <div class="hero__grid"></div>
       <div class="hero__glow"></div>
       <div class="hero__runner"></div>
@@ -170,13 +175,18 @@
   <!-- ===== Story / Matchroom ===== -->
   <section class="story section" id="story">
     <div class="container story__grid">
-      <div class="story__media" aria-hidden="true">
+      <div class="story__media">
         <div class="story__photo">
-          <span class="story__year">1982</span>
-          <span class="story__arrow">→</span>
-          <span class="story__year accent">2026</span>
+          <!-- Photo layer: drop assets/photos/story.jpg in to replace the placeholder -->
+          <img src="assets/photos/story.jpg" alt="Runners at the Brentwood Half Marathon"
+               onerror="this.onerror=null;this.src='assets/photos/placeholder-story.svg'" />
+          <div class="story__photo-overlay" aria-hidden="true">
+            <span class="story__year">1982</span>
+            <span class="story__arrow">→</span>
+            <span class="story__year accent">2026</span>
+          </div>
         </div>
-        <div class="story__badge">
+        <div class="story__badge" aria-hidden="true">
           <span>Backed by</span>
           <strong>MATCHROOM</strong>
           <span>5-year partnership</span>
@@ -193,6 +203,44 @@
           <div class="tl"><span class="tl__y">2026</span><span class="tl__t">Matchroom era begins</span></div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ===== Gallery ===== -->
+  <section class="gallery section" id="gallery">
+    <div class="container">
+      <div class="section__head">
+        <p class="kicker">/ Race Day</p>
+        <h2 class="section__title">13.1 miles of <em>moments</em></h2>
+        <p class="section__lead">From the gun outside Becket Keys to the roar of the town-centre finish. Tap any shot to view it full-size.</p>
+      </div>
+    </div>
+    <!-- Photos: drop assets/photos/g1.jpg … g6.jpg in to replace the placeholders -->
+    <div class="gallery__grid">
+      <button class="gtile gtile--tall" data-cap="The mass start outside Becket Keys">
+        <img src="assets/photos/g1.jpg" alt="The start line" loading="lazy"
+             onerror="this.onerror=null;this.src='assets/photos/placeholder-g1.svg'">
+      </button>
+      <button class="gtile" data-cap="Rolling through the Essex countryside">
+        <img src="assets/photos/g2.jpg" alt="Runners in the countryside" loading="lazy"
+             onerror="this.onerror=null;this.src='assets/photos/placeholder-g2.svg'">
+      </button>
+      <button class="gtile" data-cap="Crowds at the halfway hotspot">
+        <img src="assets/photos/g3.jpg" alt="Spectators cheering" loading="lazy"
+             onerror="this.onerror=null;this.src='assets/photos/placeholder-g3.svg'">
+      </button>
+      <button class="gtile gtile--wide" data-cap="The final descent into town">
+        <img src="assets/photos/g4.jpg" alt="The finishing straight" loading="lazy"
+             onerror="this.onerror=null;this.src='assets/photos/placeholder-g4.svg'">
+      </button>
+      <button class="gtile" data-cap="Medals and smiles at the finish">
+        <img src="assets/photos/g5.jpg" alt="Finishers with medals" loading="lazy"
+             onerror="this.onerror=null;this.src='assets/photos/placeholder-g5.svg'">
+      </button>
+      <button class="gtile" data-cap="Every runner, every year, for charity">
+        <img src="assets/photos/g6.jpg" alt="Runners crossing the line" loading="lazy"
+             onerror="this.onerror=null;this.src='assets/photos/placeholder-g6.svg'">
+      </button>
     </div>
   </section>
 
@@ -337,6 +385,22 @@
       <span>Sun 22 Mar 2026 · Brentwood, Essex</span>
     </div>
   </footer>
+
+  <!-- ===== Floating Enter CTA (appears after hero) ===== -->
+  <a href="#enter" class="floatcta" id="floatCta" aria-label="Enter the race">
+    Enter Now <span class="arrow">→</span>
+  </a>
+
+  <!-- ===== Lightbox ===== -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Photo viewer">
+    <button class="lightbox__close" id="lbClose" aria-label="Close">×</button>
+    <button class="lightbox__nav lightbox__prev" id="lbPrev" aria-label="Previous photo">‹</button>
+    <figure class="lightbox__figure">
+      <img id="lbImg" src="" alt="" />
+      <figcaption id="lbCap"></figcaption>
+    </figure>
+    <button class="lightbox__nav lightbox__next" id="lbNext" aria-label="Next photo">›</button>
+  </div>
 
   <script src="js/main.js"></script>
 </body>

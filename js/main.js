@@ -99,7 +99,7 @@
 
   // Tag sections/cards for reveal
   const revealEls = document.querySelectorAll(
-    ".section__head, .course__panel, .course__route li, .story__media, .story__copy, .ccard, .tier, .ac, .finalcta .container"
+    ".section__head, .course__panel, .course__route li, .story__media, .story__copy, .gtile, .ccard, .tier, .ac, .finalcta .container"
   );
   revealEls.forEach((el, i) => {
     el.classList.add("reveal");
@@ -137,6 +137,76 @@
         (el.dataset.prefix || "") +
         parseFloat(el.dataset.count).toFixed(decimals) +
         (el.dataset.suffix || "");
+    });
+  }
+
+  /* ---------- Scrollspy: highlight active nav link ---------- */
+  const sections = ["course", "story", "gallery", "charities", "faq"]
+    .map((id) => document.getElementById(id))
+    .filter(Boolean);
+  const linkFor = {};
+  navLinks.querySelectorAll('a[href^="#"]').forEach((a) => {
+    linkFor[a.getAttribute("href").slice(1)] = a;
+  });
+  if ("IntersectionObserver" in window) {
+    const spy = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          const link = linkFor[e.target.id];
+          if (!link) return;
+          if (e.isIntersecting) {
+            Object.values(linkFor).forEach((l) => l.classList.remove("active"));
+            link.classList.add("active");
+          }
+        });
+      },
+      { rootMargin: "-45% 0px -50% 0px" }
+    );
+    sections.forEach((s) => spy.observe(s));
+  }
+
+  /* ---------- Floating CTA: show after hero ---------- */
+  const floatCta = document.getElementById("floatCta");
+  const heroEl = document.getElementById("top");
+  if ("IntersectionObserver" in window && floatCta && heroEl) {
+    const ctaObs = new IntersectionObserver(
+      (entries) => {
+        // show the CTA once the hero is mostly out of view, hide again over the footer/enter
+        floatCta.classList.toggle("show", !entries[0].isIntersecting);
+      },
+      { threshold: 0.15 }
+    );
+    ctaObs.observe(heroEl);
+  }
+
+  /* ---------- Lightbox gallery ---------- */
+  const tiles = Array.from(document.querySelectorAll(".gtile"));
+  const lb = document.getElementById("lightbox");
+  if (tiles.length && lb) {
+    const lbImg = document.getElementById("lbImg");
+    const lbCap = document.getElementById("lbCap");
+    let current = 0;
+
+    const show = (i) => {
+      current = (i + tiles.length) % tiles.length;
+      const img = tiles[current].querySelector("img");
+      lbImg.src = img.currentSrc || img.src;
+      lbImg.alt = img.alt || "";
+      lbCap.textContent = tiles[current].dataset.cap || "";
+    };
+    const open = (i) => { show(i); lb.classList.add("open"); lb.setAttribute("aria-hidden", "false"); document.body.style.overflow = "hidden"; };
+    const close = () => { lb.classList.remove("open"); lb.setAttribute("aria-hidden", "true"); document.body.style.overflow = ""; };
+
+    tiles.forEach((t, i) => t.addEventListener("click", () => open(i)));
+    document.getElementById("lbClose").addEventListener("click", close);
+    document.getElementById("lbPrev").addEventListener("click", () => show(current - 1));
+    document.getElementById("lbNext").addEventListener("click", () => show(current + 1));
+    lb.addEventListener("click", (e) => { if (e.target === lb) close(); });
+    document.addEventListener("keydown", (e) => {
+      if (!lb.classList.contains("open")) return;
+      if (e.key === "Escape") close();
+      if (e.key === "ArrowLeft") show(current - 1);
+      if (e.key === "ArrowRight") show(current + 1);
     });
   }
 

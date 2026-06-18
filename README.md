@@ -47,10 +47,27 @@ js/main.js        # countdown, animated counters, scroll reveal, nav, FAQ
 - Fully **responsive** with a mobile slide-in menu.
 - Respects **`prefers-reduced-motion`** (animations disabled, content shown).
 
+## Photography
+
+The layout is photography-first. Each photo slot loads a real image and falls
+back to a branded SVG placeholder if the file is missing — so dropping in the
+official shots is just a filename swap (no code changes). Add these files to
+`assets/photos/`:
+
+| File                    | Where it appears              | Suggested size      |
+| ----------------------- | ----------------------------- | ------------------- |
+| `hero.jpg`              | Full-screen hero background   | ~1600×1000, landscape |
+| `story.jpg`             | "The Story" portrait panel    | ~1000×1250, portrait  |
+| `g1.jpg` … `g6.jpg`     | Race-day gallery tiles        | ~900×700, landscape   |
+
+> **Licensing note:** the live site's race photos appear to be by a commissioned
+> photographer (Sussex Sport Photography). Use images you have the rights to —
+> either the official race photography (with the photographer's clearance) or
+> properly-licensed stock. This environment can't fetch external images, so the
+> placeholders ship in their place for now.
+
 ## Notes
 
 This is a design/UX prototype. "Enter", "Download GPX", and social links are
 placeholders — in production they'd point at the official registration partner,
-a real GPX file, and live social accounts. Imagery is rendered with CSS/SVG so
-the prototype is fully self-contained; production would swap in race-day
-photography and an interactive course map.
+a real GPX file, and live social accounts.

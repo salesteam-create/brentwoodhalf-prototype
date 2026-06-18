@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#10160f"/><stop offset="1" stop-color="#05070a"/>
+    </linearGradient>
+    <radialGradient id="r" cx="70%" cy="25%" r="60%">
+      <stop offset="0" stop-color="#c6ff3a" stop-opacity="0.18"/><stop offset="1" stop-color="#c6ff3a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#g)"/>
+  <rect width="1600" height="1000" fill="url(#r)"/>
+  <g fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1">
+    <path d="M0 760 H1600 M0 860 H1600 M0 660 H1600"/>
+  </g>
+  <text x="50%" y="50%" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="60" fill="#ffffff" fill-opacity="0.10" letter-spacing="6">RACE-DAY PHOTO</text>
+  <text x="50%" y="56%" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#c6ff3a" fill-opacity="0.5" letter-spacing="3">drop hero.jpg here</text>
+</svg>
